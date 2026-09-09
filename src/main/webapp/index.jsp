@@ -11,15 +11,16 @@
 
     <style>
         :root {
-            --bg: #ffffff;
-            --primary: #0a2540;
-            --accent: #00d4ff;
-            --muted: #7a7a7a;
+            --bg: #f7f8fc;
+            --primary: #172033;
+            --accent: #6c63ff;
+            --accent-2: #ff6b9d;
+            --muted: #6b7280;
             --card: #ffffff;
-            --surface: #f6f9fc;
-            --success: #28a745;
-            --radius: 12px;
-            --container: 1200px;
+            --surface: #f0f2f8;
+            --success: #16a34a;
+            --radius: 16px;
+            --container: 1240px;
  --container: 1200px;
         }
 
@@ -510,6 +511,189 @@
         .text-center {
             text-align: center
         }
+
+        /* Friendly UI refresh */
+        header {
+            background: rgba(255,255,255,.94);
+            box-shadow: 0 2px 18px rgba(23,32,51,.06);
+            border-bottom: 1px solid #eceef5;
+        }
+        .header-inner { padding: 12px 0; }
+        .brand { font-size: 22px; letter-spacing: -.03em; }
+        nav.main-nav { gap: 6px; }
+        nav.main-nav li a {
+            padding: 10px 12px;
+            border-radius: 10px;
+            transition: .2s ease;
+        }
+        nav.main-nav li a:hover {
+            background: #f0efff;
+            color: var(--accent);
+        }
+        .search {
+            min-width: 280px;
+            background: #f3f4f8;
+            border: 1px solid #e8eaf1;
+            transition: .2s ease;
+        }
+        .search:focus-within {
+            background: white;
+            border-color: #c9c5ff;
+            box-shadow: 0 0 0 4px rgba(108,99,255,.10);
+        }
+        .icon-btn { border-radius: 10px; padding: 8px; }
+        .icon-btn:hover { background: #f0efff; color: var(--accent); }
+        .cart {
+            background: #f0efff;
+            padding: 9px 12px;
+        }
+        .cart-count { background: var(--accent); }
+
+        .hero {
+            min-height: 460px;
+            border-radius: 0 0 24px 24px;
+            background:
+                linear-gradient(90deg, rgba(17,24,39,.78), rgba(17,24,39,.35)),
+                url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1600&q=85') center/cover no-repeat;
+        }
+        .hero h1 {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.08;
+        }
+        .hero p {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+        }
+        .btn {
+            min-height: 44px;
+            padding: 11px 20px;
+            transition: transform .18s ease, box-shadow .18s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 8px 18px rgba(108,99,255,.24);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 12px 24px rgba(108,99,255,.30);
+        }
+        .btn-ghost {
+            border-color: rgba(255,255,255,.45);
+            background: rgba(255,255,255,.08);
+            backdrop-filter: blur(6px);
+        }
+
+        .section { padding: 56px 0; }
+        .section .title { margin-bottom: 28px; }
+        .section h2 { font-size: 30px; margin-bottom: 8px; }
+        .cat-card {
+            border: 1px solid #eceef5;
+            box-shadow: 0 8px 24px rgba(23,32,51,.05);
+            cursor: pointer;
+            padding: 22px 16px;
+        }
+        .cat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 34px rgba(23,32,51,.10);
+            border-color: #d9d5ff;
+        }
+        .cat-card .icon {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 12px;
+            display: grid;
+            place-items: center;
+            border-radius: 16px;
+            background: #f0efff;
+            color: var(--accent);
+        }
+
+        .product {
+            position: relative;
+            border: 1px solid #eceef5;
+            box-shadow: 0 8px 24px rgba(23,32,51,.05);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 36px rgba(23,32,51,.10);
+        }
+        .product img {
+            height: 220px;
+            background: #f4f5f8;
+        }
+        .product-body { padding: 16px; }
+        .product h5 { font-size: 16px; }
+        .price { font-size: 18px; }
+        .product-footer { padding: 14px 16px 16px; }
+        .add-btn {
+            border-radius: 10px;
+            background: var(--primary);
+            transition: .2s ease;
+        }
+        .add-btn:hover { background: var(--accent); }
+        .wish-btn {
+            width: 42px;
+            border-color: #e5e7eb;
+            transition: .2s ease;
+        }
+        .wish-btn:hover {
+            color: var(--accent-2);
+            border-color: #f4bfd1;
+            background: #fff5f8;
+        }
+
+        .deal {
+            border: 1px solid #e7e9f1;
+            box-shadow: 0 12px 30px rgba(23,32,51,.06);
+        }
+        .deal .content { padding: 34px; }
+        .time-box {
+            min-width: 70px;
+            background: var(--primary);
+            border-radius: 12px;
+        }
+        .testimonial {
+            border: 1px solid #eceef5;
+            box-shadow: 0 8px 24px rgba(23,32,51,.05);
+        }
+        .newsletter {
+            background: linear-gradient(135deg, #172033, #2d3550);
+            box-shadow: 0 14px 30px rgba(23,32,51,.12);
+        }
+        .newsletter input {
+            border: 1px solid #e5e7eb;
+            outline: none;
+        }
+        .newsletter input:focus {
+            box-shadow: 0 0 0 4px rgba(108,99,255,.18);
+        }
+        footer { background: white; }
+
+        @media (max-width: 900px) {
+            .header-inner { flex-wrap: wrap; }
+            .search { min-width: 220px; flex: 1; }
+        }
+        @media (max-width: 600px) {
+            .header-inner { gap: 10px; }
+            .search { order: 3; flex-basis: 100%; }
+            .hero { min-height: 420px; border-radius: 0 0 18px 18px; }
+            .hero h1 { font-size: 30px; }
+            .hero p { font-size: 14px; }
+            .section { padding: 42px 0; }
+            .section h2 { font-size: 25px; }
+            .deal .content { padding: 24px; }
+            .timer { gap: 7px; }
+            .time-box { min-width: 60px; padding: 10px 8px; }
+        }
+
     </style>
    
 </head>
@@ -538,7 +722,7 @@
 
             <div style="display:flex;align-items:center;gap:14px;">
                 <div class="search" role="search" aria-label="Product search">
-                    <emnput type="search" id="searchInput" placeholder="Search products, categories..." aria-label="Search products" />
+                    <input type="search" id="searchInput" placeholder="Search products, categories..." aria-label="Search products" />
                     <button class="icon-btn" id="searchBtn" aria-label="Search"><em class="fas fa-search"></em></button>
                 </div>
 
@@ -573,8 +757,8 @@
         <!-- Hero -->
         <section class="hero" role="img" aria-label="Hero banner">
             <div class="container">
-                <h1>New Winter Collection  Premium Picks</h1>
-                <p>Discover the latest trends in fashion, technology and accessories — curated just for you. Enjoy limited-time deals and free shipping on selected items.</p>
+                <h1>Fresh Picks. Better Prices. Made for You.</h1>
+                <p>Discover products you’ll love across fashion, tech and accessories. Easy shopping, great deals and free delivery on selected items.</p>
                 <div>
                     <button class="btn btn-primary" id="shopNow">Shop Now <em class="fas fa-arrow-right"></em></button>
                     <button class="btn btn-ghost" id="exploreDeals">Explore Deals</button>
@@ -595,8 +779,8 @@
         <!-- Products -->
         <section class="section container" aria-labelledby="prod-title">
             <div class="title" id="prod-title">
-                <h2>Trending Products</h2>
-                <p class="muted">Popular picks based on recent activity.</p>
+                <h2>Popular Right Now</h2>
+                <p class="muted">Hand-picked favourites our shoppers are loving.</p>
             </div>
 
             <div class="grid products" id="productsGrid" aria-live="polite"></div>
@@ -605,12 +789,12 @@
         <!-- Deals -->
         <section id="deals" class="section container" aria-labelledby="deals-title">
             <div class="title" id="deals-title">
-                <h2>Flash Sale</h2>
-                <p class="muted">Limited-time offers — don't miss out!</p>
+                <h2>Today’s Special Deal</h2>
+                <p class="muted">Save more while the offer lasts.</p>
             </div>
 
             <div class="deal" style="align-items:stretch;">
-                <emmg src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80" alt="Deal product">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80" alt="Deal product">
                 <div class="content">
                     <h3>MacBook Air M2</h3>
                     <p class="muted">Thin, light and powerful — now with M2 performance.</p>
@@ -659,7 +843,7 @@
                     <div class="rating">★★★★★</div>
                     <p>"Fast shipping and excellent customer support. The product exceeded my expectations!"</p>
                     <div style="display:flex;align-items:center;gap:10px">
-                        <emmg src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="avatar" style="width:40px;height:40px;border-radius:50%;object-fit:cover">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="avatar" style="width:40px;height:40px;border-radius:50%;object-fit:cover">
                         <div>
                             <div style="font-weight:700">Ava Martin</div>
                             <div class="muted" style="font-size:13px">Verified buyer</div>
@@ -671,7 +855,7 @@
                     <div class="rating">★★★★☆</div>
                     <p>"Great selection and the checkout was smooth. Will shop again."</p>
                     <div style="display:flex;align-items:center;gap:10px">
-                        <emmg src="https://images.unsplash.com/photo-1546456073-6712f79251bb?auto=format&fit=crop&w=80&q=80" alt="avatar" style="width:40px;height:40px;border-radius:50%;object-fit:cover">
+                        <img src="https://images.unsplash.com/photo-1546456073-6712f79251bb?auto=format&fit=crop&w=80&q=80" alt="avatar" style="width:40px;height:40px;border-radius:50%;object-fit:cover">
                         <div>
                             <div style="font-weight:700">Michael Lee</div>
                             <div class="muted" style="font-size:13px">Frequent buyer</div>
@@ -684,10 +868,10 @@
         <!-- Newsletter -->
         <section class="section container" aria-labelledby="news-title">
             <div class="newsletter" id="newsletter">
-                <h3 id="news-title">Stay in the loop</h3>
-                <p>Subscribe to get exclusive offers & new arrivals</p>
+                <h3 id="news-title">Get deals in your inbox</h3>
+                <p>Be the first to know about offers, new arrivals and exclusive discounts.</p>
                 <form id="newsletterForm" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;" onsubmit="return false;">
-                    <emnput id="newsletterEmail" type="email" placeholder="Enter your email" aria-label="Email address" required>
+                    <input id="newsletterEmail" type="email" placeholder="Enter your email" aria-label="Email address" required>
                     <button class="btn btn-primary" id="subscribeBtn">Subscribe</button>
                 </form>
                 <div id="newsletterMsg" style="margin-top:10px;font-size:14px;display:none"></div>
@@ -873,7 +1057,7 @@
                 el.className = 'product';
                 el.innerHTML = `
                     ${p.badge ? `<div style="position:absolute;margin:12px"><span style="background:${p.badge.startsWith('-')? '#ff4757' : 'var(--success)'};color:white;padding:6px 8px;border-radius:8px;font-weight:700;font-size:12px">${p.badge}</span></div>` : ''}
-                    <emmg src="${p.img}" alt="${escapeHtml(p.title)}">
+                    <img src="${p.img}" alt="${escapeHtml(p.title)}">
                     <div class="product-body">
                         <h5>${escapeHtml(p.title)}</h5>
                         <div class="muted">${p.category}</div>
